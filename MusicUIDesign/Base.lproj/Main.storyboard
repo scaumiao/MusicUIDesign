@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,118 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFD-k1-PtR">
+                                <rect key="frame" x="269" y="516" width="63" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="82c-i3-4uV"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="play"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkc-nw-mcS">
+                                <rect key="frame" x="245" y="539" width="16" height="22"/>
+                                <state key="normal" image="preSong"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wG4-oS-FrG">
+                                <rect key="frame" x="8" y="537" width="36" height="22"/>
+                                <state key="normal" title="Button" image="lock"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KY-3l-oww">
+                                <rect key="frame" x="335" y="534" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="Blj-M2-NOl"/>
+                                    <constraint firstAttribute="width" constant="32" id="t48-hB-dNW"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="nextSong"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KX3-FK-a3v">
+                                <rect key="frame" x="0.0" y="700" width="600" height="273"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="176" width="400" height="273"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="oHr-Dd-3zi"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="soH-2I-uIr"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccQ-aG-Fev">
+                                <rect key="frame" x="0.0" y="640" width="600" height="44"/>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="播放列表" id="hXA-Vv-69r">
+                                        <barButtonItem key="rightBarButtonItem" title="编辑" id="dTN-ax-pSa">
+                                            <connections>
+                                                <action selector="deleteAction:" destination="BYZ-38-t0r" id="N0f-1N-Y3g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shi-hj-Xy0">
+                                <rect key="frame" x="0.0" y="973" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="关闭" width="343" id="il3-Uw-nER">
+                                        <connections>
+                                            <action selector="closeTableView:" destination="BYZ-38-t0r" id="8O9-Vd-pSq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYn-iJ-MA6">
+                                <rect key="frame" x="563" y="541" width="17" height="22"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <state key="normal" image="playList"/>
+                                <connections>
+                                    <action selector="musicListShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zjq-Hd-8co"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8KY-3l-oww" firstAttribute="centerY" secondItem="mkc-nw-mcS" secondAttribute="centerY" id="1xt-Rl-HeT"/>
+                            <constraint firstItem="wG4-oS-FrG" firstAttribute="baseline" secondItem="mkc-nw-mcS" secondAttribute="baseline" id="7DT-kj-be1"/>
+                            <constraint firstItem="ccQ-aG-Fev" firstAttribute="leading" secondItem="KX3-FK-a3v" secondAttribute="leading" id="Bpu-GS-KFG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8KY-3l-oww" secondAttribute="bottom" constant="34" id="DV9-NH-yzU"/>
+                            <constraint firstItem="OYn-iJ-MA6" firstAttribute="centerY" secondItem="bFD-k1-PtR" secondAttribute="centerY" id="HPc-1y-Edj"/>
+                            <constraint firstItem="Shi-hj-Xy0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="973" id="I4x-nF-q02"/>
+                            <constraint firstItem="bFD-k1-PtR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JRx-Kp-e2d"/>
+                            <constraint firstItem="wG4-oS-FrG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Kmh-sa-DNZ"/>
+                            <constraint firstItem="bFD-k1-PtR" firstAttribute="centerY" secondItem="mkc-nw-mcS" secondAttribute="centerY" id="TTq-qE-ndd"/>
+                            <constraint firstAttribute="bottom" secondItem="bFD-k1-PtR" secondAttribute="bottom" constant="20" symbolic="YES" id="X06-ee-8C6"/>
+                            <constraint firstItem="ccQ-aG-Fev" firstAttribute="centerX" secondItem="bFD-k1-PtR" secondAttribute="centerX" id="YbJ-Ht-3Xd"/>
+                            <constraint firstItem="OYn-iJ-MA6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZYe-TO-vGc"/>
+                            <constraint firstItem="ccQ-aG-Fev" firstAttribute="top" secondItem="bFD-k1-PtR" secondAttribute="bottom" constant="60" id="ctl-cN-fAe"/>
+                            <constraint firstItem="KX3-FK-a3v" firstAttribute="top" secondItem="ccQ-aG-Fev" secondAttribute="bottom" constant="16" id="dYj-Dh-aTB"/>
+                            <constraint firstItem="8KY-3l-oww" firstAttribute="leading" secondItem="bFD-k1-PtR" secondAttribute="trailing" constant="8" symbolic="YES" id="eW2-Pm-jTl"/>
+                            <constraint firstItem="Shi-hj-Xy0" firstAttribute="trailing" secondItem="KX3-FK-a3v" secondAttribute="trailing" id="hmA-1L-ogR"/>
+                            <constraint firstItem="ccQ-aG-Fev" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i6L-2O-G69"/>
+                            <constraint firstItem="bFD-k1-PtR" firstAttribute="leading" secondItem="mkc-nw-mcS" secondAttribute="trailing" constant="8" symbolic="YES" id="i87-mZ-yWg"/>
+                            <constraint firstItem="Shi-hj-Xy0" firstAttribute="top" secondItem="KX3-FK-a3v" secondAttribute="bottom" id="iAY-qZ-B01"/>
+                            <constraint firstItem="ccQ-aG-Fev" firstAttribute="trailing" secondItem="KX3-FK-a3v" secondAttribute="trailing" id="lhl-hf-Ngu"/>
+                            <constraint firstItem="Shi-hj-Xy0" firstAttribute="leading" secondItem="KX3-FK-a3v" secondAttribute="leading" id="soe-lG-OHl"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="footerBar" destination="Shi-hj-Xy0" id="H0I-BQ-wyF"/>
+                        <outlet property="headerBar" destination="ccQ-aG-Fev" id="bZ0-HN-z5E"/>
+                        <outlet property="myTableView" destination="KX3-FK-a3v" id="TIG-ZR-Ie0"/>
+                        <outlet property="showListBtn" destination="OYn-iJ-MA6" id="WAj-2c-5Rc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="393" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lock" width="16" height="16"/>
+        <image name="nextSong" width="16" height="16"/>
+        <image name="play" width="64" height="64"/>
+        <image name="playList" width="17" height="15"/>
+        <image name="preSong" width="16" height="16"/>
+    </resources>
 </document>

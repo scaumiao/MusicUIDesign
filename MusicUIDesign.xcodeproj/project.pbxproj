@@ -11,10 +11,11 @@
 		7B243D211C26B768000F1EDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B243D201C26B768000F1EDA /* AppDelegate.m */; };
 		7B243D241C26B768000F1EDA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B243D231C26B768000F1EDA /* ViewController.m */; };
 		7B243D271C26B768000F1EDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B243D251C26B768000F1EDA /* Main.storyboard */; };
-		7B243D291C26B768000F1EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B243D281C26B768000F1EDA /* Assets.xcassets */; };
 		7B243D2C1C26B768000F1EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B243D2A1C26B768000F1EDA /* LaunchScreen.storyboard */; };
 		7B243D371C26B768000F1EDA /* MusicUIDesignTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B243D361C26B768000F1EDA /* MusicUIDesignTests.m */; };
 		7B243D421C26B768000F1EDA /* MusicUIDesignUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B243D411C26B768000F1EDA /* MusicUIDesignUITests.m */; };
+		7B243D501C26B7BC000F1EDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B243D4F1C26B7BC000F1EDA /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		7BFBC88E1C26E549003AC402 /* MyTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFBC88D1C26E549003AC402 /* MyTable.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		7B243D221C26B768000F1EDA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		7B243D231C26B768000F1EDA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7B243D261C26B768000F1EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B243D281C26B768000F1EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B243D2B1C26B768000F1EDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B243D2D1C26B768000F1EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B243D321C26B768000F1EDA /* MusicUIDesignTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicUIDesignTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +51,8 @@
 		7B243D3D1C26B768000F1EDA /* MusicUIDesignUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicUIDesignUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B243D411C26B768000F1EDA /* MusicUIDesignUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicUIDesignUITests.m; sourceTree = "<group>"; };
 		7B243D431C26B768000F1EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B243D4F1C26B7BC000F1EDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BFBC88D1C26E549003AC402 /* MyTable.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyTable.xib; path = ../MyTable.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +107,9 @@
 				7B243D201C26B768000F1EDA /* AppDelegate.m */,
 				7B243D221C26B768000F1EDA /* ViewController.h */,
 				7B243D231C26B768000F1EDA /* ViewController.m */,
+				7BFBC88D1C26E549003AC402 /* MyTable.xib */,
 				7B243D251C26B768000F1EDA /* Main.storyboard */,
-				7B243D281C26B768000F1EDA /* Assets.xcassets */,
+				7B243D4F1C26B7BC000F1EDA /* Assets.xcassets */,
 				7B243D2A1C26B768000F1EDA /* LaunchScreen.storyboard */,
 				7B243D2D1C26B768000F1EDA /* Info.plist */,
 				7B243D1C1C26B768000F1EDA /* Supporting Files */,
@@ -247,7 +250,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B243D2C1C26B768000F1EDA /* LaunchScreen.storyboard in Resources */,
-				7B243D291C26B768000F1EDA /* Assets.xcassets in Resources */,
+				7BFBC88E1C26E549003AC402 /* MyTable.xib in Resources */,
+				7B243D501C26B7BC000F1EDA /* Assets.xcassets in Resources */,
 				7B243D271C26B768000F1EDA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +503,7 @@
 				7B243D481C26B768000F1EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B243D491C26B768000F1EDA /* Build configuration list for PBXNativeTarget "MusicUIDesignTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +512,7 @@
 				7B243D4B1C26B768000F1EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B243D4C1C26B768000F1EDA /* Build configuration list for PBXNativeTarget "MusicUIDesignUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +521,7 @@
 				7B243D4E1C26B768000F1EDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
