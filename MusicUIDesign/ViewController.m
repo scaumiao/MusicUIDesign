@@ -20,7 +20,24 @@
 @implementation ViewController
 
 
+-(void)viewDidAppear:(BOOL)animated{
 
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_myTableView setFrame:CGRectMake(_myTableView.frame.origin.x, _myTableView.frame.origin.y+ padding , _myTableView.frame.size.width, _myTableView.frame.size.height)];
+        
+        [_headerBar setFrame:CGRectMake(_headerBar.frame.origin.x, _headerBar.frame.origin.y+ padding , _headerBar.frame.size.width, _headerBar.frame.size.height)];
+        
+        [_footerBar setFrame:CGRectMake(_footerBar.frame.origin.x, _footerBar.frame.origin.y+ padding, _footerBar.frame.size.width, _footerBar.frame.size.height)];
+        
+    });
+        
+   
+    
+
+        
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +46,10 @@
     _musicList = [NSMutableArray arrayWithArray:array];
     
     _myTableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+    
+
+    
 }
 
 
@@ -176,7 +197,7 @@
                          
                          [_myTableView setFrame:CGRectMake(_myTableView.frame.origin.x, _myTableView.frame.origin.y- padding , _myTableView.frame.size.width, _myTableView.frame.size.height)];
                          
-                         [_headerBar setFrame:CGRectMake(_headerBar.frame.origin.x, _headerBar.frame.origin.y- padding , _headerBar.frame.size.width, _headerBar.frame.size.height)];
+                         [_headerBar setFrame:CGRectMake(_headerBar.frame.origin.x, _headerBar.frame.origin.y- padding  , _headerBar.frame.size.width, _headerBar.frame.size.height)];
                          
                          [_footerBar setFrame:CGRectMake(_footerBar.frame.origin.x, _footerBar.frame.origin.y- padding, _footerBar.frame.size.width, _footerBar.frame.size.height)];
                          
@@ -190,11 +211,23 @@
 
 - (IBAction)deleteAction:(id)sender {
     
+    
+
+    
     [_myTableView setEditing:!_myTableView.editing animated:YES];
     
- 
+
+    
+    
+    
+//    [_myTableView setFrame:CGRectMake(_myTableView.frame.origin.x, _myTableView.frame.origin.y , _myTableView.frame.size.width, _myTableView.frame.size.height)];
+//    
+//    [_headerBar setFrame:CGRectMake(_headerBar.frame.origin.x, _headerBar.frame.origin.y  , _headerBar.frame.size.width, _headerBar.frame.size.height)];
+//    
+//    [_footerBar setFrame:CGRectMake(_footerBar.frame.origin.x, _footerBar.frame.origin.y, _footerBar.frame.size.width, _footerBar.frame.size.height)];
+    
+
    
-   NSLog(@"%@", [[_headerBar items] objectAtIndex:0].rightBarButtonItem.title);
    
     
     [[_headerBar items] objectAtIndex:0].rightBarButtonItem.title = _myTableView.editing?@"取消":@"编辑";
